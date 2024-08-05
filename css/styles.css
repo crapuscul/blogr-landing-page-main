@@ -1,17 +1,43 @@
+
+:root{
+    --hover-btn-bg :sl(355, 100%, 74%);
+    --button-txt:hsl(356, 100%, 66%);
+    --hover-btn:white;
+    --dropdown-el: black;
+    --designed-for-future-p: hsl(207, 13%, 34%);
+    --headings:hsl(208, 49%, 24%);
+    --footer-txt:hsl(240, 2%, 79%);
+    --footer-bg:hsl(240, 10%, 16%);
+    --very-light-red-hero-gradient: hsl(13, 100%, 72%);
+    --light-red-hero-gradient:hsl(353, 100%, 62%);
+    /* gradients */
+    --very-dark-gray-blue-body-gradient:hsl(237, 17%, 21%);
+    --very-desaturated-blue-body-gradient:hsl(237, 23%, 32%);
+    /* fonts */
+    --cta-font: "Ubuntu";
+    --body-font:"Overpass";
+}
+
+
+
 body {
     margin: 0;
     padding: 0 ;
+
+    font-family: var(--body-font);
 }
+
 .hero-section {
-    padding: 10px 20px;
-    background-color: #FF8F71; /* Fallback color for gradient */
-    background-image: 
-        linear-gradient(to bottom right, #FF8F71 0%, #FF3E55 100%), 
-        url("/images/bg-pattern-intro-desktop.svg");
-    background-repeat: no-repeat, no-repeat;
-    background-position: center center, center center;
-    background-size: cover, contain; /* Adjust sizes separately */
+    border-bottom-left-radius: 60px; /* Curve on the bottom left corner */
+    padding: 40px 80px;
+    background: 
+    url("../images/bg-pattern-intro-desktop.svg") center no-repeat,
+    linear-gradient(to right, hsl(13, 100%, 72%) 0%,hsl(353, 100%, 62%)50%);
+    background-size: cover cover;
+    background-position: 30% 52%, center; /* Gradient centered; image 10% to the right and 40px from the top */
+
 }
+
 
 
 
@@ -19,7 +45,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    
 
 }
 .navbar-left{
@@ -35,17 +61,30 @@ body {
     margin-right: 20px;
     display: flex;
     align-items: start;
+    font-family: var(--cta-font);
 }
 
 .dropdown-btn {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
     font-size: 16px;
     border: none;
     outline: none;
     color: white;
+    
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
     cursor: pointer;
+}
+
+.dropdown-btn svg {
+    vertical-align: middle; /* Aligns SVG with text */
+    margin-top: 2px; /* Adjust if needed */
+}
+.dropdown-btn i{
+color: white;
 }
 
 .dropdown-content {
@@ -58,6 +97,7 @@ body {
 }
 
 .auth-btn {
+    font-family: var(--cta-font);
     display: flex;
     align-items: center;
 }
@@ -65,17 +105,84 @@ body {
 .navbar a {
     color: white;
     text-decoration: none;
-    margin-right: 10px;
+    margin-right: 20px;
+
 }
 
-.btn-signup {
-
-    background-color:hsl(355, 100%, 74%);
-    color:hsl(0, 0%, 100%);
+.button{
+    font-size: 16px;
+    background-color:white;
+    color:var(--button-txt);
+    font-weight: 780;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    margin-left: 20px; 
-    border-radius: 16px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+.hero-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 
+}
+.hero-content h1{
+    font-size: 70px;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+}
+.hero-content p{
+    color: rgb(236, 234, 234);
+    font-weight: 300;
+    font-size: 24px;
+    margin: 16px 0 24px 0;
+}
+.hero-content .button{
+    margin: 24px 0;
+    
+}
+.hero-buttons .button-start,.hero-buttons .button-learn{
+    margin: 0 10px;
+}
+.hero-buttons .button-learn{
+    background-color: transparent;
+    color:white;
+    border:1px solid white;
+}
+
+/* Extra Small Devices (Phones) */
+@media screen and (max-width: 480px) {
+    /* Styles for very small devices */
+}
+
+/* Small Devices (Phones) */
+@media screen and (max-width: 576px) {
+    /* Styles for phones */
+}
+
+/* Medium Devices (Tablets) */
+@media screen and (max-width: 768px) {
+    /* Styles for tablets */
+    .navbar{
+        display: none;
+    }
+}
+
+/* Large Devices (Laptops) */
+@media screen and (max-width: 992px) {
+    /* Styles for laptops */
+}
+
+/* Extra Large Devices (Desktops) */
+@media screen and (max-width: 1200px) {
+    /* Styles for desktops */
+}
+
+/* Extra Extra Large Devices (Large Desktops) */
+@media screen and (min-width: 1201px) {
+    /* Styles for large desktops */
 }
