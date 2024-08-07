@@ -60,6 +60,7 @@ justify-content: center;
 text-align: center;
 background-color: rgb(255, 255, 255);
 margin: 0 50px;
+padding: 20px 0;
 
 }
 .mobilenav-cont .mobiledropdown{
@@ -78,7 +79,7 @@ margin: 0 50px;
 .mobilenav-cont .dropdown-content{
     position: relative;
     margin:auto;
-    min-width: 50%;
+    min-width: 93%;
     align-items: center;
     z-index: none;
 }
@@ -86,11 +87,14 @@ margin: 0 50px;
     text-align: center;
 }
 hr.solid {
+    margin-top: 10px ;
     width: 93%;
+ 
 
 
 }
 .mobilenav-cont .auth-btn{
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
