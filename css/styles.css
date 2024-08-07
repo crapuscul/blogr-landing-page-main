@@ -41,6 +41,7 @@ html, body {
 
 /* mobile nav bar */
 .mobilenav{
+   
     display: flex;
     flex-direction: row;    
     justify-content: space-between;
@@ -52,28 +53,34 @@ html, body {
 }
 
 .mobilenav-cont{
+    position: relative;
 display: flex;
 flex-direction: column;
+justify-content: center;
+text-align: center;
 background-color: rgb(255, 255, 255);
 margin: 0 50px;
 
 }
 .mobilenav-cont .mobiledropdown{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    align-items: center; /* Center the button horizontally */
 }
 .mobilenav-cont .dropdown-btn{
     display: flex;
     justify-content: center;
-    align-self: center;
+    flex-direction: row;
+    align-items: center;
     color: var(--headings);
     font-weight: 700;
 }
 .mobilenav-cont .dropdown-content{
-    margin-top: 260px;
-    min-width: 75%;
+    position: relative;
+    margin:auto;
+    min-width: 50%;
     align-items: center;
+    z-index: none;
 }
 .mobilenav-cont .dropdown-content a{
     text-align: center;
