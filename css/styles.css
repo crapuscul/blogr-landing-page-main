@@ -70,10 +70,10 @@ html, body {
     justify-content: center;
     text-align: center;
     background-color: rgb(255, 255, 255);
-    min-height: 80vh;
+    
     margin-top:20vh;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
     padding: 8px 0;
   
     
@@ -277,7 +277,7 @@ color: white;
     background-color: white;
     color: var(--button-txt);
 }
-
+/* main section1 */
 .main-boxes{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -344,7 +344,62 @@ font-size: 2rem;
 
 
 }
+/* main section2 */
 
+
+.boxcontainer1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    background: url('../images/bg-pattern-circles.svg') center no-repeat, linear-gradient(to right, hsl(237, 17%, 21%) 0%,hsl(237, 23%, 32%));
+    background-size: cover cover;
+    background-position: -40% 80%, center;
+    border-bottom-left-radius: 60px;
+    border-TOP-RIGHT-radius: 60px;
+    max-height: 400px;
+    min-width: 80%;
+    padding: 0 70px;
+
+}
+.phonebox{
+    border: solid red;
+    margin-top: -70px;
+    align-items: center;
+    min-height: 100%;
+    align-content: center;
+    
+}
+.article1{
+    border: solid yellow;
+    
+    align-content: center;
+    min-height: 100%;
+}
+.article1 h2, p{
+    color: white;
+}
+.boxcontainer2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    min-height: 100px;
+}
+
+.laptopbox{
+    border: solid green;
+    grid-column: 1;
+    grid-row: 1/ span 2;
+}
+.article2{
+    border: solid brown;
+grid-column: 2;
+grid-row: 1 / span 2;
+}
+.article3{
+    border: solid pink;
+    grid-column: 2;
+    grid-row: 2 / span 2;
+}
 @media screen and (max-width:473px) {
     .hero-section h1{
         font-size: 35px !important;

@@ -2,25 +2,26 @@
  const mobNavcont = document.querySelector(".mobilenav-cont");
  const hamburger = document.querySelector(".hamburger");
  const closeIcon = document.querySelector(".close");
-const dropDownButton = document.querySelector(".mobilenav-cont .dropdown-btn");
-const arrowFlip = document.querySelector(".arrowdown");
-const dropDownCont = document.querySelector('.dropdown-content')
+ const arrowFlips = document.querySelectorAll(".arrowdown");
+ const dropDownButtons = document.querySelectorAll('.dropdown-btn');
+ const dropDownConts = document.querySelectorAll('.dropdown-content');
+ 
+ for (let i = 0; i < dropDownButtons.length; i++) {
+     dropDownButtons[i].addEventListener('click', () => {
+         arrowFlips[i].classList.toggle('active');
+ 
+         if (arrowFlips[i].classList.contains('active')) {
+             dropDownConts[i].style.display = 'block';   
+         } else {
+             dropDownConts[i].style.display = 'none';
+         }
+     });
+ }
 
-dropDownButton.addEventListener('click', () => {
-    arrowFlip.classList.toggle('active');
-
-    if (arrowFlip.classList.contains('active')) {
-        dropDownCont.style.display = 'block';
-    } else {
-        dropDownCont.style.display = 'none';
-    }
-});
 
  
  hamburger.addEventListener('click', () =>{
     mobNavcont.classList.toggle('active');
-   
-    hamburger.classList.replace("hamburger", "close");
 
 
         // Toggle visibility of hamburger and close icons
