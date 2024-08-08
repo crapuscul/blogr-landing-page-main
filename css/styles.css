@@ -380,26 +380,49 @@ font-size: 2rem;
 }
 .boxcontainer2{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    min-height: 100px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 400px 400px;
+    margin: 100px;
 }
 
 .laptopbox{
-    border: solid green;
-    grid-column: 1;
+    grid-column: 1 / span 1; /* Make laptopbox span both columns */
     grid-row: 1/ span 2;
+    background: url('../images/illustration-laptop-desktop.svg') center no-repeat;
+    background-position: 90% 50%;
+}
+
+.article2, .article3{
+    padding: 150px 0;
+align-content: center;
 }
 .article2{
-    border: solid brown;
+    margin-bottom: -150px;
 grid-column: 2;
-grid-row: 1 / span 2;
+grid-row: 1 ;
 }
 .article3{
-    border: solid pink;
+  
     grid-column: 2;
-    grid-row: 2 / span 2;
+    grid-row: 2 ;
+    margin-top: -100px
 }
+.boxcontainer2 p{
+    color: var(--designed-for-future-p);
+}
+.boxcontainer2 h2{
+    color: var(--headings);
+}
+
+.grid-footer{
+    border-top-right-radius: 60px; /* Curve on the bottom left corner */
+    background-color: var(--very-dark-gray-blue-body-gradient);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+
 @media screen and (max-width:473px) {
     .hero-section h1{
         font-size: 35px !important;
