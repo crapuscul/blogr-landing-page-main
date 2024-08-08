@@ -40,28 +40,46 @@ html, body {
 }
 
 /* mobile nav bar */
+
 .mobilenav{
-   
+    
     display: flex;
     flex-direction: row;    
     justify-content: space-between;
     display: none;
 }
-.hamburger{
+.hamburger, .close{
     align-self: center;
     
 }
-
+.close{
+    display: none;
+}
 .mobilenav-cont{
-    position: relative;
-display: flex;
-flex-direction: column;
-justify-content: center;
-text-align: center;
-background-color: rgb(255, 255, 255);
-margin: 0 50px;
-padding: 20px 0;
+    display: none;
 
+}
+.mobilenav-cont.active{
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    min-height: 80vh;
+    margin-top:20vh;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 8px 0;
+  
+    
+}
+.arrowdown.active{
+    transform: rotateZ(-180deg);
 }
 .mobilenav-cont .mobiledropdown{
     display: flex;
@@ -69,6 +87,7 @@ padding: 20px 0;
     align-items: center; /* Center the button horizontally */
 }
 .mobilenav-cont .dropdown-btn{
+    cursor: pointer;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -357,6 +376,7 @@ font-size: 2rem;
     .mobilenav{
         display: flex;
     }
+
     main{
         display: flex;
         align-items: center;
